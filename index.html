@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <title>Mohit Sharma — Senior QA Engineer</title>
+  <meta name="description" content="Senior QA Engineer specialising in Cypress automation, Azure DevOps CI/CD, and quality strategy for microservices.">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: { brand: { DEFAULT: '#0F766E' } },
+          boxShadow: { soft: '0 10px 30px -12px rgba(0,0,0,.15)' }
+        }
+      }
+    };
+  </script>
+  <style>
+    .fade-in{opacity:0; transform:translateY(8px); animation:fade .6s .05s forwards}
+    @keyframes fade{to{opacity:1; transform:none}}
+    html{scroll-behavior:smooth}
+
+    /* ---------- Impact meters ---------- */
+    .meter{
+      --fill:#0F766E;
+      height:10px; border-radius:999px;
+      background:rgba(15,118,110,.12);
+      overflow:hidden; position:relative;
+    }
+    .meter>i{
+      position:absolute; inset:0;
+      width:0%;
+      background:var(--fill);
+      border-radius:inherit;
+      transition:width 1200ms ease;
+    }
+  </style>
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Mohit Sharma — Senior QA Engineer">
+  <meta property="og:description" content="QA automation, CI/CD, and quality strategy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Optional privacy-friendly analytics (Plausible). Uncomment + set your domain -->
+  <!-- <script defer data-domain="your-domain.com" src="https://plausible.io/js/script.js"></script> -->
+</head>
+
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="font-semibold tracking-tight">Mohit Sharma</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#work" class="hover:text-brand">Experience</a>
+          <a href="#projects" class="hover:text-brand">Projects</a>
+          <a href="#metrics" class="hover:text-brand">Impact</a>
+          <a href="#stack" class="hover:text-brand">Tech Stack</a>
+          <a href="#languages" class="hover:text-brand">Languages</a>
+          <a href="#education" class="hover:text-brand">Education</a>
+          <a href="#testimonials" class="hover:text-brand">Testimonials</a>
+          <a href="#contact" class="hover:text-brand">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="Mohit_Sharma_CV.pdf" class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-sm shadow-soft hover:bg-white/60 dark:hover:bg-slate-900/60">Download CV</a>
+          <a href="#contact" class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-xl bg-brand text-white text-sm shadow-soft hover:opacity-95">Get in touch</a>
+          <button id="themeBtn" class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 dark:border-slate-800" aria-label="Toggle dark mode">
+            <svg id="sun" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg id="moon" class="h-4 w-4 hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 pt-14 pb-12 md:pb-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="fade-in">
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight">Senior QA Engineer focused on <span class="text-brand">automation</span>, <span class="text-brand">CI/CD</span>, and <span class="text-brand">quality strategy</span>.</h1>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">I build reliable test systems with Cypress & C#, ship through Azure DevOps/TeamCity/Octopus, and mentor teams to deliver fast and safe.</p>
+        <p class="mt-2 text-slate-600 dark:text-slate-300"><strong>10+ years of experience</strong> in QA automation, test strategy, and platform quality.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#work" class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800">See experience</a>
+          <a href="Mohit_Sharma_CV.pdf" class="px-4 py-2 rounded-xl bg-brand text-white shadow-soft">Download CV</a>
+        </div>
+      </div>
+      <div class="fade-in md:justify-self-end">
+        <div class="rounded-2xl p-6 bg-gradient-to-br from-brand/10 to-transparent border border-slate-200 dark:border-slate-800 shadow-soft">
+          <ul class="grid grid-cols-2 gap-3 text-sm">
+            <li class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">Cypress · TypeScript</li>
+            <li class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">C# · xUnit</li>
+            <li class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">Azure DevOps · TeamCity</li>
+            <li class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">Octopus Deploy</li>
+            <li class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">SQL Server · MongoDB</li>
+            <li class="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">Slack Apps · Dashboards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="work" class="max-w-6xl mx-auto px-4 py-10 border-t border-slate-200/70 dark:border-slate-800">
+    <h2 class="text-xl font-semibold mb-6">Experience</h2>
+
+    <!-- Timeline item -->
+    <article class="relative pl-6 pb-8">
+      <span class="absolute left-0 top-1.5 h-4 w-4 bg-brand rounded-full"></span>
+      <div class="absolute left-1.5 top-5 bottom-0 w-1 bg-slate-200 dark:bg-slate-800 rounded"></div>
+      <h3 class="font-semibold">Senior QA Engineer · <span class="text-slate-500 dark:text-slate-400">Your Company</span></h3>
+      <p class="text-sm text-slate-500 dark:text-slate-400">2022 — Present · London, UK</p>
+      <ul class="mt-3 list-disc ml-5 space-y-2">
+        <li>Lead automation roadmap across microservices, REST APIs and web apps; define coverage & quality gates.</li>
+        <li>Mentor junior/mid-level QAs via code reviews, pairing, and workshops; set automation standards.</li>
+        <li>Own CI/CD quality in Azure DevOps/TeamCity/Octopus; embed fast, reliable test stages.</li>
+        <li>Build bespoke tooling (Slack QA assistant, reporting dashboards, test data utilities).</li>
+        <li>Drive RCA & preventive actions; publish clear quality metrics to stakeholders.</li>
+      </ul>
+      <p class="mt-3 text-sm"><strong>Impact:</strong> Automated ~75% of regression (≈60h saved/release); reduced flaky failures 25%; improved lead time 18%.</p>
+    </article>
+
+    <!-- Timeline item -->
+    <article class="relative pl-6">
+      <span class="absolute left-0 top-1.5 h-4 w-4 bg-brand rounded-full"></span>
+      <h3 class="font-semibold">QA Engineer · <span class="text-slate-500 dark:text-slate-400">Previous Company</span></h3>
+      <p class="text-sm text-slate-500 dark:text-slate-400">2019 — 2022 · London, UK</p>
+      <ul class="mt-3 list-disc ml-5 space-y-2">
+        <li>Designed & executed functional, regression, and API tests; authored concise test plans.</li>
+        <li>Implemented BDD in C#/SpecFlow; improved collaboration and traceability.</li>
+        <li>Integrated automation into CI/CD, accelerating feedback and stabilising releases.</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 py-10 border-t border-slate-200/70 dark:border-slate-800">
+    <h2 class="text-xl font-semibold mb-6">Selected Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="group block rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <h3 class="font-semibold">QA Slack Assistant</h3>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Slash commands to trigger runs, fetch status, and post release readiness. ~10h saved per sprint.</p>
+      </div>
+      <div class="group block rounded-2xl p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <h3 class="font-semibold">Test Data Service</h3>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">On-demand seed/teardown for API/UI scenarios. Reduced flaky failures by 25%.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- By the Numbers -->
+  <section id="metrics" class="max-w-6xl mx-auto px-4 py-14 border-t border-slate-200/70 dark:border-slate-800">
+    <h2 class="text-xl font-semibold mb-8">By the Numbers</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center shadow-soft">
+        <p class="text-3xl font-bold text-brand">75%</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Regression suite automated</p>
+        <div class="mt-3 meter"><i></i></div>
+      </div>
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center shadow-soft">
+        <p class="text-3xl font-bold text-brand">60+</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Hours saved per release</p>
+        <div class="mt-3 meter"><i></i></div>
+      </div>
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center shadow-soft">
+        <p class="text-3xl font-bold text-brand">25%</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Reduction in flaky tests</p>
+        <div class="mt-3 meter"><i></i></div>
+      </div>
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center shadow-soft">
+        <p class="text-3xl font-bold text-brand">20+</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Deployments per week</p>
+        <div class="mt-3 meter"><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="stack" class="max-w-6xl mx-auto px-4 py-14 border-t border-slate-200/70 dark:border-slate-800">
+    <h2 class="text-xl font-semibold mb-8">Tech Stack</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Each card -->
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg" class="h-10 mb-3" alt="Cypress">
+        <p class="font-medium">Cypress</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">UI & API automation</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" class="h-10 mb-3" alt="C#">
+        <p class="font-medium">C# / xUnit</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">Service testing & frameworks</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="h-10 mb-3" alt="TypeScript">
+        <p class="font-medium">TypeScript</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">E2E & tooling scripts</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" class="h-10 mb-3" alt="Azure DevOps">
+        <p class="font-medium">Azure DevOps</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">CI/CD pipelines</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg" class="h-10 mb-3" alt="PowerShell">
+        <p class="font-medium">PowerShell</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">Automation & scripting</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" class="h-10 mb-3" alt="SQL Server">
+        <p class="font-medium">SQL Server</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">Relational database</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" class="h-10 mb-3" alt="MongoDB">
+        <p class="font-medium">MongoDB</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">Test data store</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="h-10 mb-3" alt="Git">
+        <p class="font-medium">Git</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">Version control</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <p class="font-medium">Octopus Deploy</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">Deployment orchestration</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <p class="font-medium">TeamCity</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">CI build pipelines</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" class="h-10 mb-3" alt="Jira">
+        <p class="font-medium">Jira</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">Agile project tracking</p>
+      </div>
+      <div class="group p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" class="h-10 mb-3" alt="Slack">
+        <p class="font-medium">Slack Apps</p>
+        <p class="text-xs text-slate-500 mt-1 group-hover:text-brand transition">Custom productivity bots</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages -->
+  <section id="languages" class="max-w-6xl mx-auto px-4 py-14 border-t border-slate-200/70 dark:border-slate-800">
+    <h2 class="text-xl font-semibold mb-8">Languages</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-soft">
+        <p class="font-medium">Programming</p>
+        <p class="text-xs text-slate-500 mt-1">C#, TypeScript, PowerShell, SQL, JavaScript</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-soft">
+        <p class="font-medium">Spoken</p>
+        <p class="text-xs text-slate-500 mt-1">English (Fluent), Hindi (Native)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certification -->
+  <section id="education" class="max-w-6xl mx-auto px-4 py-14 border-t border-slate-200/70 dark:border-slate-800">
+    <h2 class="text-xl font-semibold mb-8">Education & Certification</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-soft">
+        <p class="font-medium">BSc Computer Science</p>
+        <p class="text-xs text-slate-500 mt-1">University of Hertfordshire · 2015</p>
+      </div>
+      <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-soft">
+        <p class="font-medium">ISTQB Certified Tester</p>
+        <p class="text-xs text-slate-500 mt-1">Foundation Level</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="max-w-6xl mx-auto px-4 py-14 border-t border-slate-200/70 dark:border-slate-800">
+    <h2 class="text-xl font-semibold mb-8">Testimonials</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <blockquote class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-soft">
+        <p class="text-sm text-slate-700 dark:text-slate-300">“Mohit mentored me when I joined as a junior QA — he simplified complex automation setups and made onboarding painless.”</p>
+        <footer class="mt-3 text-xs text-slate-500">— Teammate, QA Engineer</footer>
+      </blockquote>
+      <blockquote class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-soft">
+        <p class="text-sm text-slate-700 dark:text-slate-300">“He built bespoke tooling that cut our release verification time dramatically. Reliable and proactive.”</p>
+        <footer class="mt-3 text-xs text-slate-500">— Engineering Manager</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-12 border-t border-slate-200/70 dark:border-slate-800">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <!-- Left: copy & social -->
+      <div>
+        <h2 class="text-xl font-semibold mb-3">Let’s work together</h2>
+        <p class="text-slate-600 dark:text-slate-300">
+          Open to Senior QA / QA Lead roles, automation strategy, and platform quality work. Based in the UK.
+        </p>
+        <div class="mt-4 flex items-center gap-4 text-sm">
+          <a class="inline-flex items-center gap-2 underline hover:text-brand" href="mailto:you@email.com">
+            <!-- Email icon -->
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16a2 2 0 0 1 2 2v.5l-10 5.5L2 8.5V8a2 2 0 0 1 2-2Zm18 5.236V16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4.764l10 5.5 10-5.5Z"/></svg>
+            you@email.com
+          </a>
+          <a class="inline-flex items-center gap-2 underline hover:text-brand" href="https://linkedin.com/in/your-handle" target="_blank" rel="noreferrer">
+            <!-- LinkedIn icon -->
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 7.5H3.75V20h3.19V7.5ZM5.35 3.75a1.84 1.84 0 1 0 0 3.68 1.84 1.84 0 0 0 0-3.68Zm6.4 7.1c1.76 0 2.95.92 3.42 2.03h.05V7.5h3.18V20h-3.06v-6.17c0-1.54-.55-2.58-1.93-2.58-1.05 0-1.67.71-1.94 1.4-.1.25-.13.6-.13.95V20h-3.18s.04-10.63 0-11.75h3.18v1.6c.42-.66 1.16-1.6 2.61-1.6Z"/></svg>
+            LinkedIn
+          </a>
+          <a class="inline-flex items-center gap-2 underline hover:text-brand" href="https://github.com/your-handle" target="_blank" rel="noreferrer">
+            <!-- GitHub icon -->
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.62 2 12.26c0 4.52 2.87 8.35 6.85 9.7.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.79.62-3.38-1.37-3.38-1.37-.45-1.18-1.12-1.5-1.12-1.5-.92-.65.07-.64.07-.64 1.02.07 1.56 1.07 1.56 1.07.9 1.59 2.36 1.13 2.94.86.09-.67.35-1.13.63-1.39-2.23-.26-4.58-1.15-4.58-5.12 0-1.13.39-2.05 1.03-2.77-.11-.26-.45-1.31.1-2.72 0 0 .84-.27 2.76 1.06a9.23 9.23 0 0 1 2.51-.35c.85.01 1.71.12 2.51.35 1.92-1.33 2.76-1.06 2.76-1.06.55 1.41.21 2.46.1 2.72.64.72 1.03 1.64 1.03 2.77 0 3.98-2.36 4.85-4.6 5.11.36.33.68.97.68 1.96 0 1.42-.01 2.56-.01 2.9 0 .27.18.59.69.49A10.03 10.03 0 0 0 22 12.26C22 6.62 17.52 2 12 2Z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: form card (with success/error states) -->
+      <form id="contactForm"
+        action="https://formspree.io/f/your-form-id" method="POST"
+        class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-soft max-w-xl ml-auto w-full"
+      >
+        <div id="formAlert" class="hidden mb-4 rounded-xl px-3 py-2 text-sm" role="alert" aria-live="polite"></div>
+
+        <label class="block text-sm font-medium">Name
+          <input
+            name="name" required
+            class="mt-1 w-full rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2
+                   focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand"
+          >
+        </label>
+
+        <label class="block text-sm font-medium mt-4">Email
+          <input
+            type="email" name="_replyto" required
+            class="mt-1 w-full rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2
+                   focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand"
+          >
+        </label>
+
+        <label class="block text-sm font-medium mt-4">Message
+          <textarea
+            name="message" rows="5" required
+            class="mt-1 w-full rounded-2xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2
+                   focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-brand"
+          ></textarea>
+        </label>
+
+        <div class="mt-4 flex flex-wrap gap-3">
+          <button id="sendBtn" type="submit"
+            class="inline-flex px-6 py-2 rounded-2xl bg-brand text-white font-medium shadow-soft hover:opacity-95 disabled:opacity-60">
+            Send
+          </button>
+          <a href="Mohit_Sharma_CV.pdf"
+            class="inline-flex px-6 py-2 rounded-2xl border border-slate-200 dark:border-slate-800 hover:bg-white/60 dark:hover:bg-slate-900/60">
+            Download CV
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-xs text-slate-500">
+    © <span id="y"></span> Mohit Sharma — Built with Tailwind
+  </footer>
+
+  <script>
+    // Theme toggle
+    const btn = document.getElementById('themeBtn');
+    const html = document.documentElement;
+    const sun = document.getElementById('sun');
+    const moon = document.getElementById('moon');
+    const apply = (d)=>{ d ? html.classList.add('dark') : html.classList.remove('dark');
+      sun.classList.toggle('hidden', d); moon.classList.toggle('hidden', !d);
+      localStorage.setItem('theme', d?'dark':'light'); };
+    apply(localStorage.getItem('theme')==='dark' || (!('theme'in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches));
+    btn.onclick=()=>apply(!html.classList.contains('dark'));
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Contact form: success/error states (Formspree)
+    const form = document.getElementById('contactForm');
+    const alertBox = document.getElementById('formAlert');
+    const sendBtn = document.getElementById('sendBtn');
+
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      alertBox.className = 'hidden';
+      sendBtn.disabled = true;
+
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        });
+
+        if (res.ok) {
+          form.reset();
+          alertBox.textContent = "Thanks! I’ll get back to you soon.";
+          alertBox.className = "mb-4 rounded-xl px-3 py-2 text-sm bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-200";
+        } else {
+          const out = await res.json().catch(()=>({}));
+          const msg = out && out.errors ? out.errors.map(e=>e.message).join(', ') : "Something went wrong. Please email me directly.";
+          alertBox.textContent = msg;
+          alertBox.className = "mb-4 rounded-xl px-3 py-2 text-sm bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-200";
+        }
+      } catch (err) {
+        alertBox.textContent = "Network error. Please try again or email me directly.";
+        alertBox.className = "mb-4 rounded-xl px-3 py-2 text-sm bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-200";
+      } finally {
+        sendBtn.disabled = false;
+      }
+    });
+
+    // ---------- Impact meters: count-up + bar fill on view ----------
+    (function(){
+      const section = document.getElementById('metrics');
+      if(!section) return;
+
+      const cards = [...section.querySelectorAll('.p-6')]; // each metric card
+      let done = false;
+
+      function animate(){
+        if(done) return; done = true;
+
+        cards.forEach(card => {
+          const numEl = card.querySelector('.text-3xl');
+          const meter = card.querySelector('.meter > i');
+          if(!numEl || !meter) return;
+
+          const original = numEl.textContent.trim(); // e.g. "75%", "60+"
+          const match = original.match(/(\d+)/);
+          const target = match ? parseInt(match[1], 10) : 0;
+          const suffix = original.replace(/^\d+/, ''); // keep "%", "+", etc.
+
+          const dur = 1100;
+          const start = performance.now();
+
+          function step(now){
+            const p = Math.min(1, (now - start) / dur);
+            const val = Math.round(target * p);
+            numEl.textContent = val + suffix;
+            if(p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+
+          // Fill width capped at 100
+          meter.style.width = Math.min(target, 100) + '%';
+        });
+      }
+
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting) { animate(); io.disconnect(); }
+        });
+      }, { threshold: 0.3 });
+      io.observe(section);
+    })();
+  </script>
+</body>
+</html>
