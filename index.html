@@ -564,6 +564,27 @@ Mohit would for sure be a fantastic asset to any team.”</p>
     setMax('0px');
   });
 
+  // Scroll to top button
+  const scrollButton = document.createElement('button');
+  scrollButton.innerHTML = `<svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+    <path fill-rule="evenodd" d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 11-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+  </svg>`;
+  scrollButton.className = 'fixed bottom-8 right-8 p-3 rounded-full bg-brand text-white shadow-lg opacity-0 transition-opacity duration-300 hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand';
+  scrollButton.setAttribute('aria-label', 'Scroll to top');
+  document.body.appendChild(scrollButton);
+
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', () => {
+    scrollButton.style.opacity = window.scrollY > 500 ? '1' : '0';
+  });
+
+  // Smooth scroll to top
+  scrollButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  </script>
+
 
   </script>
 </body>
